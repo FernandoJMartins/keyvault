@@ -1,0 +1,23 @@
+{
+  "name": "keyvault",
+  "version": "1.0.0",
+  "description": "Cofre simples e dockerizado para credenciais criptografadas (Gmail, Outlook, Meta Ads) com geracao de codigo 2FA embutida.",
+  "type": "module",
+  "private": true,
+  "engines": {
+    "node": ">=22.5.0"
+  },
+  "scripts": {
+    "start": "node --disable-warning=ExperimentalWarning server/index.js",
+    "dev": "node --disable-warning=ExperimentalWarning --watch server/index.js",
+    "reset-admin": "node --disable-warning=ExperimentalWarning server/reset-admin.js"
+  },
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "cookie-parser": "^1.4.6",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "jsonwebtoken": "^9.0.2",
+    "otpauth": "^9.3.4"
+  }
+}
